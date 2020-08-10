@@ -1,0 +1,40 @@
+/*.responsive-image {
+    width: 100%;
+    height: auto;
+}*/
+
+
+/*main styles outoff media queries***********************/
+
+.article {
+    margin: 0.3125rem;
+    cursor: pointer;
+    &__paragraph {
+        padding: 0.3125rem 0.625rem;
+    }
+}
+
+@include respond-to($bp-lg) {
+    //base styles of website
+    /*card on div.listad that are the articles inside news section*/
+    .article {
+        //width: 210px;
+        width: 30%;
+        display: inline-block;
+        &__image {
+            width: 100%;
+            //height: 18.75rem;
+            /*width: 100%, height:auto to get responsive images*/
+            height: auto;
+        }
+        &__paragraph {
+            padding: 0.3125rem 0rem;
+        }
+    }
+    /*card on div.listado-izquiero inside div.noticias.destacadas*/
+    .noticias-destacadas img {
+        //width: 13.75rem;
+        width: 100%;
+        height: 12.5rem;
+    }
+}

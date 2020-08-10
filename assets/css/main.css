@@ -1,0 +1,637 @@
+@charset "UTF-8";
+/*color scheme*/
+/*font family*/
+/*queries*/
+/* Base Styles
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  /*Define el tamaño del contenedor a 960px*/
+  body {
+    width: 100vw;
+  }
+
+  .contenedor {
+    /*div.contenedor has originally defined fixed with centered now has 100%, so we can get obtain the desired desktop view*/
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    /* font: inherit;*/
+/*vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+/*article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}*/
+img {
+  width: 100%;
+  height: auto;
+}
+
+/*
+img {
+max-width: 100%; height: auto;
+}
+*/
+.container {
+  display: grid;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.col-sm-12 {
+  grid-column: span 12;
+}
+
+.col-sm-11 {
+  grid-column: span 11;
+}
+
+.col-sm-10 {
+  grid-column: span 10;
+}
+
+.col-sm-9 {
+  grid-column: span 9;
+}
+
+.col-sm-8 {
+  grid-column: span 8;
+}
+
+.col-sm-7 {
+  grid-column: span 7;
+}
+
+.col-sm-6 {
+  grid-column: span 6;
+}
+
+.col-sm-5 {
+  grid-column: span 5;
+}
+
+.col-sm-4 {
+  grid-column: span 4;
+}
+
+.col-sm-3 {
+  grid-column: span 3;
+}
+
+.col-sm-2 {
+  grid-column: span 2;
+}
+
+.col-sm-1 {
+  grid-column: span 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .col-md-12 {
+    grid-column: span 12;
+  }
+
+  .col-md-11 {
+    grid-column: span 11;
+  }
+
+  .col-md-10 {
+    grid-column: span 10;
+  }
+
+  .col-md-9 {
+    grid-column: span 9;
+  }
+
+  .col-md-8 {
+    grid-column: span 8;
+  }
+
+  .col-md-7 {
+    grid-column: span 7;
+  }
+
+  .col-md-6 {
+    grid-column: span 6;
+  }
+
+  .col-md-5 {
+    grid-column: span 5;
+  }
+
+  .col-md-4 {
+    grid-column: span 4;
+  }
+
+  .col-md-3 {
+    grid-column: span 3;
+  }
+
+  .col-md-2 {
+    grid-column: span 2;
+  }
+
+  .col-md-1 {
+    grid-column: span 1;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .col-lg-12 {
+    grid-column: span 12;
+  }
+
+  .col-lg-11 {
+    grid-column: span 11;
+  }
+
+  .col-lg-10 {
+    grid-column: span 10;
+  }
+
+  .col-lg-9 {
+    grid-column: span 9;
+  }
+
+  .col-lg-8 {
+    grid-column: span 8;
+  }
+
+  .col-lg-7 {
+    grid-column: span 7;
+  }
+
+  .col-lg-6 {
+    grid-column: span 6;
+  }
+
+  .col-lg-5 {
+    grid-column: span 5;
+  }
+
+  .col-lg-4 {
+    grid-column: span 4;
+  }
+
+  .col-lg-3 {
+    grid-column: span 3;
+  }
+
+  .col-lg-2 {
+    grid-column: span 2;
+  }
+
+  .col-lg-1 {
+    grid-column: span 1;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .col-xl-12 {
+    grid-column: span 12;
+  }
+
+  .col-xl-11 {
+    grid-column: span 11;
+  }
+
+  .col-xl-10 {
+    grid-column: span 10;
+  }
+
+  .col-xl-9 {
+    grid-column: span 9;
+  }
+
+  .col-xl-8 {
+    grid-column: span 8;
+  }
+
+  .col-xl-7 {
+    grid-column: span 7;
+  }
+
+  .col-xl-6 {
+    grid-column: span 6;
+  }
+
+  .col-xl-5 {
+    grid-column: span 5;
+  }
+
+  .col-xl-4 {
+    grid-column: span 4;
+  }
+
+  .col-xl-3 {
+    grid-column: span 3;
+  }
+
+  .col-xl-2 {
+    grid-column: span 2;
+  }
+
+  .col-xl-1 {
+    grid-column: span 1;
+  }
+}
+/* Nav Layout==========================================================================*/
+/*main styles outoff media queries***********************/
+.navigation {
+  padding: 0.625rem;
+  border-bottom: 0.0625rem solid gray;
+}
+
+.navigation__logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  align-self: center;
+  font-size: 24px;
+}
+
+.navigation__container {
+  text-align: right;
+}
+
+/*added for display items in menu side by side*/
+.navigation__list {
+  list-style-type: none;
+  margin: inherit;
+  padding: inherit;
+}
+
+.navigation__item {
+  align-self: center;
+  display: inline-block;
+}
+
+.navigation__item a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.item--display_none {
+  display: none;
+}
+
+@media only screen and (min-width: 992px) {
+  .navigation {
+    width: 100%;
+  }
+
+  .navigation__container {
+    width: 87.5%;
+  }
+
+  .navigation__list {
+    text-align: right;
+  }
+
+  .navigation__item {
+    display: inline-block;
+    text-align: right;
+  }
+
+  .navigation__item a {
+    padding: 0.5em 1em;
+  }
+}
+/*Main content Section=======================================================================*/
+.aside {
+  display: none;
+}
+
+/*i've applied base styles from medium to xl devices*/
+@media only screen and (min-width: 768px) {
+  /*the main container in main content div*/
+  .contenido {
+    /*originally this container had 100% of width when its container had a fixed defined width that gave a margin at right and left side. But for desired result we've changed that width and now we change the width of main container to 80% to get a centered content and a full width nav, footer and newsletter section*/
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /*the right contaner with news articles*/
+  /*.main_content {
+      //width: 700px;
+      //width: 73%;
+      //float: left;
+  }*/
+  /*the left container that not display on mobile*/
+  .aside {
+    display: block;
+  }
+
+  .about {
+    width: 100%;
+    border-bottom: 0.0625rem solid gray;
+  }
+
+  /*right container "noticias destacadas */
+  .noticias-destacadas {
+    margin-bottom: 3.125rem;
+  }
+}
+/* Footer Layout
+   ==========================================================================
+*/
+/*main styles outoff media queries***********************/
+.footer {
+  text-align: center;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .footer {
+    width: 100%;
+  }
+}
+/* Newsletter section Layout
+   ==========================================================================
+*/
+.newsletter {
+  /*clear that fix newsletter section position*/
+  /*main styles outoff media queries**************/
+  background-color: #f2f4f5;
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+  text-align: center;
+}
+.newsletter h2 {
+  font-size: 24px;
+}
+
+@media only screen and (min-width: 992px) {
+  .newsletter {
+    width: 100%;
+  }
+}
+/*main styles outoff media queries*********************/
+.group button {
+  background-color: coral;
+  color: white;
+}
+
+.group input,
+.group button {
+  padding: 0.3125rem 0.625rem;
+  border-width: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  /*button for newsletter section*/
+  .group input,
+.group button {
+    display: inline-block;
+    font-size: 13px;
+  }
+}
+/*.responsive-image {
+    width: 100%;
+    height: auto;
+}*/
+/*main styles outoff media queries***********************/
+.article {
+  margin: 0.3125rem;
+  cursor: pointer;
+}
+.article__paragraph {
+  padding: 0.3125rem 0.625rem;
+}
+
+@media only screen and (min-width: 992px) {
+  /*card on div.listad that are the articles inside news section*/
+  .article {
+    width: 30%;
+    display: inline-block;
+  }
+  .article__image {
+    width: 100%;
+    /*width: 100%, height:auto to get responsive images*/
+    height: auto;
+  }
+  .article__paragraph {
+    padding: 0.3125rem 0rem;
+  }
+
+  /*card on div.listado-izquiero inside div.noticias.destacadas*/
+  .noticias-destacadas img {
+    width: 100%;
+    height: 12.5rem;
+  }
+}
+/*main styles outoff media queries***********************/
+.input-menu {
+  border-radius: 1.875rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .tags {
+    border-bottom: 0.0625rem solid gray;
+  }
+  .tags__list {
+    padding: 0;
+    list-style: none;
+    grid-gap: 10px;
+  }
+
+  .tags__items {
+    padding: 0.125rem 0rem;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+  }
+  .tags__items--1 {
+    grid-column: span 1;
+  }
+  .tags__items--2 {
+    grid-column: span 1;
+  }
+  .tags__items--3 {
+    grid-column: span 2;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .tags {
+    border-bottom: 0.0625rem solid gray;
+  }
+  .tags__list {
+    padding: 0;
+    list-style: none;
+    grid-gap: 10px;
+  }
+
+  .tags__items {
+    padding: 0.125rem 0rem;
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+  }
+  .tags__items--1 {
+    grid-column: 3/6;
+  }
+  .tags__items--2 {
+    grid-column: 6/9;
+  }
+  .tags__items--3 {
+    grid-column: 9/12;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

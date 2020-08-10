@@ -1,0 +1,67 @@
+/* Nav Layout==========================================================================*/
+
+
+/*main styles outoff media queries***********************/
+
+.navigation {
+    padding: 0.625rem;
+    border-bottom: 0.0625rem solid gray
+}
+
+.navigation__logo {
+    font-weight: bold;
+    text-transform: uppercase;
+    align-self: center;
+    font-size: 24px;
+}
+
+.navigation__container {
+    text-align: right;
+    // display: inline-block;
+}
+
+
+/*added for display items in menu side by side*/
+
+.navigation__list {
+    list-style-type: none;
+    margin: inherit;
+    padding: inherit;
+}
+
+.navigation__item {
+    align-self: center;
+    display: inline-block;
+}
+
+.navigation__item a {
+    text-decoration: none;
+    text-transform: uppercase;
+    //padding: 0.5em;
+}
+
+.item--display_none {
+    display: none;
+}
+
+@include respond-to($bp-lg) {
+    //base styles of website
+    //width defined relative to viewport
+    .navigation {
+        width: 100%;
+    }
+    .navigation__container {
+        //width: 840px;
+        width: 87.5%;
+    }
+    .navigation__list {
+        text-align: right;
+    }
+    .navigation__item {
+        display: inline-block;
+        text-align: right;
+    }
+    .navigation__item a {
+        padding: 0.5em 1em;
+    }
+}

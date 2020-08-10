@@ -1,0 +1,26 @@
+//main.scss # Manifest file
+//abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+//vendors
+@import 'vendors/vendors';
+//base
+@import 'base/base';
+@import 'base/reset';
+@import 'base/typography';
+//layout
+@import 'layout/grid';
+@import 'layout/navigation';
+@import 'layout/main-content';
+@import 'layout/footer';
+@import 'layout/newsletter';
+//components
+@import 'components/button';
+@import 'components/cards';
+@import 'components/input';
+@import 'components/tags';
+//pages
+@import 'pages/page';
+//themes
+@import 'themes/themes';

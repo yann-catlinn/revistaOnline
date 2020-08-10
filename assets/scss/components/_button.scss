@@ -1,0 +1,23 @@
+ /*main styles outoff media queries*********************/
+ 
+ .group button {
+     background-color: $coral;
+     color: $white;
+ }
+ 
+ .group input,
+ .group button {
+     padding: 0.3125rem 0.625rem;
+     border-width: 0;
+ }
+ 
+ //media queries
+ @include respond-to($bp-lg) {
+     //base styles of website
+     /*button for newsletter section*/
+     .group input,
+     .group button {
+         display: inline-block;
+         font-size: 13px;
+     }
+ }

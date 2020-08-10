@@ -1,0 +1,28 @@
+/* Base Styles
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $monospace;
+    margin: 0;
+    padding: 0;
+}
+
+@include respond-to($bp-lg) {
+    //base styles of website
+    /*Define el tamaño del contenedor a 960px*/
+    body {
+        //new width for body
+        width: 100vw;
+    }
+    .contenedor {
+        //width: 960px;
+        //width: 80%;
+        /*div.contenedor has originally defined fixed with centered now has 100%, so we can get obtain the desired desktop view*/
+        width: 100%;
+        margin: 0 auto;
+    }
+}

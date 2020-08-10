@@ -1,0 +1,42 @@
+/*Main content Section=======================================================================*/
+
+.aside {
+    display: none;
+}
+
+//base styles of website
+
+/*i've applied base styles from medium to xl devices*/
+
+@include respond-to($bp-md) {
+    /*the main container in main content div*/
+    .contenido {
+        //width: 960px;
+        //width: 100%;
+        /*originally this container had 100% of width when its container had a fixed defined width that gave a margin at right and left side. But for desired result we've changed that width and now we change the width of main container to 80% to get a centered content and a full width nav, footer and newsletter section*/
+        width: 90%;
+        margin: 0 auto;
+    }
+    /*the right contaner with news articles*/
+    /*.main_content {
+        //width: 700px;
+        //width: 73%;
+        //float: left;
+    }*/
+    /*the left container that not display on mobile*/
+    .aside {
+        //width: 220px;
+        //width: 23%;
+        //float: right;
+        display: block;
+    }
+    .about {
+        //width: 220px;
+        width: 100%;
+        border-bottom: 0.0625rem solid gray;
+    }
+    /*right container "noticias destacadas */
+    .noticias-destacadas {
+        margin-bottom: 3.125rem;
+    }
+}
